@@ -25,7 +25,7 @@ class ClienteCripto {
       throw Exception("Erro: ${response.toString()}" );
     } else {
       //Resposta ok
-        String resultado = response.body;
+      String resultado = response.body;
       var dataMap = jsonDecode(resultado);
       List<Moeda> lista =
       (dataMap as List).map((i) => Moeda.fromJson(i)).toList();

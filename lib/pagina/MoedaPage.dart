@@ -1,5 +1,7 @@
+import 'package:criptoflutter/Template.dart';
 import 'package:criptoflutter/modelo/Moeda.dart';
 import 'package:criptoflutter/modelo/wscliente/ClienteCripto.dart';
+import 'package:criptoflutter/pagina/TelaPage2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +20,7 @@ class _MoedaPage extends State<MoedaPage> {
     // TODO: implement didUpdateWidget
     super.didUpdateWidget(oldWidget);
   }
+
   void loadMoedas() async {
     List<Moeda> list = await ClienteCripto.getInstance().getMoedas();
     setState(() {
@@ -27,26 +30,14 @@ class _MoedaPage extends State<MoedaPage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Text("Moedas"),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Expanded(
-                child: ListView.builder(
-                  padding: EdgeInsets.all(10),
-                  itemCount: lista.length,
-                  itemBuilder: (context, index) {
-                    return templateRowListView(index);
-                  },
-                ))
-          ],
+          children: getTela(lista.length == 0),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -57,39 +48,52 @@ class _MoedaPage extends State<MoedaPage> {
     );
   }
 
+  List<Widget> getTela(bool valor) {
+    if (valor) {
+      return [Text("Vazio")];
+    } else {
+      List<Widget> componentes = [];
+      if (lista.length > 0) {
+        componentes.add(TelaPage2(lista: lista),);
+      }
+      componentes.add(Expanded(
+          child: ListView.builder(
+            padding: EdgeInsets.all(10),
+            itemCount: lista.length,
+            itemBuilder: (context, index) {
+              return templateRowListView(index);
+            },
+          )));
+      return componentes;
+    }
+  }
+
   Widget templateRowListView(int index) {
     Moeda moeda = lista[index];
     return Card(
-        child: InkWell(
+        child:
+        InkWell(
           onTap: () {
-            print("Clicando em: ${moeda.nome}");
-          },
-          child: templateCellListView(moeda),
-        ));
+        print("Clicando em: ${moeda.nome}");
+        },
+        child: templateCellListView(moeda),
+    ));
   }
 
   Widget templateCellListView(Moeda moeda) {
-    return Row(
-        children: [
-          Expanded(
-            child: Text(
-                moeda.nome!,
-                style: TextStyle(
-                    //backgroundColor: backColor,
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20)
-            ),),
-          Expanded(
-            child: Text(moeda.paridade!,
-                style: TextStyle(
-                  //backgroundColor: backColor,
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 26)
-            ),),
-          Expanded(
-            child: Icon(Icons.close, color: Colors.red,),)
-        ]);
+    return Row(children: [
+      Expanded(
+        child: Template.textTitulo(texto: moeda.nome),
+      ),
+      Expanded(
+        child: Template.textTituloSec(texto: moeda.paridade),
+      ),
+      Expanded(
+        child: Icon(
+          Icons.close,
+          color: Colors.red,
+        ),
+      )
+    ]);
   }
 }
