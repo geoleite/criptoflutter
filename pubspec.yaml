@@ -29,6 +29,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^0.13.3
   basic_utils: ^3.3.3
+  pointycastle: ^3.2.0-rc0
 
 dev_dependencies:
   flutter_test:

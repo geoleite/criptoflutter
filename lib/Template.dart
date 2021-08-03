@@ -13,7 +13,7 @@ class Template {
     return textBase(texto: texto, fontSize: 20, color: Colors.red);
   }
   static textTituloSec({String? texto}) {
-    return textBase(texto: texto, color: Colors.yellow);
+    return textBase(texto: texto, color: Colors.black);
   }
 
 }

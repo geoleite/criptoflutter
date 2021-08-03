@@ -1,6 +1,7 @@
 import 'package:criptoflutter/Template.dart';
 import 'package:criptoflutter/modelo/Moeda.dart';
 import 'package:criptoflutter/modelo/wscliente/ClienteCripto.dart';
+import 'package:criptoflutter/pagina/MoedaDetalhesPage.dart';
 import 'package:criptoflutter/pagina/TelaPage2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -53,17 +54,19 @@ class _MoedaPage extends State<MoedaPage> {
       return [Text("Vazio")];
     } else {
       List<Widget> componentes = [];
-      if (lista.length > 0) {
-        componentes.add(TelaPage2(lista: lista),);
-      }
+      // if (lista.length > 0) {
+      //   componentes.add(
+      //     TelaPage2(lista: lista),
+      //   );
+      // }
       componentes.add(Expanded(
           child: ListView.builder(
-            padding: EdgeInsets.all(10),
-            itemCount: lista.length,
-            itemBuilder: (context, index) {
-              return templateRowListView(index);
-            },
-          )));
+        padding: EdgeInsets.all(10),
+        itemCount: lista.length,
+        itemBuilder: (context, index) {
+          return templateRowListView(index);
+        },
+      )));
       return componentes;
     }
   }
@@ -71,12 +74,9 @@ class _MoedaPage extends State<MoedaPage> {
   Widget templateRowListView(int index) {
     Moeda moeda = lista[index];
     return Card(
-        child:
-        InkWell(
-          onTap: () {
-        print("Clicando em: ${moeda.nome}");
-        },
-        child: templateCellListView(moeda),
+        child: InkWell(
+      onTap: () => abrirJanelaMoeda(moeda),
+      child: templateCellListView(moeda),
     ));
   }
 
@@ -95,5 +95,21 @@ class _MoedaPage extends State<MoedaPage> {
         ),
       )
     ]);
+  }
+
+  void abrirJanelaMoeda(Moeda moeda) {
+    // Navigator.push(
+    //     context,
+    //     MaterialPageRoute(
+    //       builder: (context) => MoedaDetalhesPage(moeda: moeda),
+    //     )).then((value) {
+    //       if (value == true)
+    //         loadMoedas();
+    // });
+
+    showModalBottomSheet(context: context,
+        builder: (BuildContext bc) {
+          return MoedaDetalhesPage(moeda: moeda);
+        });
   }
 }

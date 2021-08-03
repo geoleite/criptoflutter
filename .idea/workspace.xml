@@ -22,7 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ea67ff0-5012-4414-a17f-03a777fe5e85" name="Default Changelist" comment="" />
+    <list default="true" id="3ea67ff0-5012-4414-a17f-03a777fe5e85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/pagina/MoedaDetalhesPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Template.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Template.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modelo/wscliente/ClienteCripto.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modelo/wscliente/ClienteCripto.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pagina/MoedaPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pagina/MoedaPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,22 +90,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1638" height="277" key="GridCell.Tab.0.bottom" timestamp="1627345627735">
+    <state width="1638" height="277" key="GridCell.Tab.0.bottom" timestamp="1627946722398">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="277" key="GridCell.Tab.0.bottom/-1440.175.1440.875/0.25.1680.1025@0.25.1680.1025" timestamp="1627345627735" />
-    <state width="1638" height="277" key="GridCell.Tab.0.center" timestamp="1627345627733">
+    <state width="1638" height="277" key="GridCell.Tab.0.bottom/-1440.175.1440.875/0.25.1680.1025@0.25.1680.1025" timestamp="1627946722398" />
+    <state width="1638" height="277" key="GridCell.Tab.0.center" timestamp="1627946722396">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="277" key="GridCell.Tab.0.center/-1440.175.1440.875/0.25.1680.1025@0.25.1680.1025" timestamp="1627345627733" />
-    <state width="1638" height="277" key="GridCell.Tab.0.left" timestamp="1627345627732">
+    <state width="1638" height="277" key="GridCell.Tab.0.center/-1440.175.1440.875/0.25.1680.1025@0.25.1680.1025" timestamp="1627946722396" />
+    <state width="1638" height="277" key="GridCell.Tab.0.left" timestamp="1627946722396">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="277" key="GridCell.Tab.0.left/-1440.175.1440.875/0.25.1680.1025@0.25.1680.1025" timestamp="1627345627732" />
-    <state width="1638" height="277" key="GridCell.Tab.0.right" timestamp="1627345627734">
+    <state width="1638" height="277" key="GridCell.Tab.0.left/-1440.175.1440.875/0.25.1680.1025@0.25.1680.1025" timestamp="1627946722396" />
+    <state width="1638" height="277" key="GridCell.Tab.0.right" timestamp="1627946722397">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="277" key="GridCell.Tab.0.right/-1440.175.1440.875/0.25.1680.1025@0.25.1680.1025" timestamp="1627345627734" />
+    <state width="1638" height="277" key="GridCell.Tab.0.right/-1440.175.1440.875/0.25.1680.1025@0.25.1680.1025" timestamp="1627946722397" />
     <state x="349" y="173" key="SettingsEditor" timestamp="1626132101504">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>

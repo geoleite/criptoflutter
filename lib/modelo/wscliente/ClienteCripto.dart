@@ -19,7 +19,7 @@ class ClienteCripto {
 
   Future<List<Moeda>> getMoedas() async {
 
-    String url =  "http://192.168.100.64:9090/vendas/cripto/getMoedas";
+    String url =  "http://192.168.100.64:9060/vendas/cripto/getMoedas";
     Response response = await HttpUtils.getForFullResponse(url);
     if (response.statusCode != 200) {
       throw Exception("Erro: ${response.toString()}" );
